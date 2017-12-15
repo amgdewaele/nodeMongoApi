@@ -21,7 +21,7 @@ routes.post('/exercises', function (req, res) {
     // joe.save();
     newitem.save()
     .then(item => {
-            res.send("item saved to database");
+        res.status(200).json(item);
     })
     .catch((error) => {
         res.status(400);
